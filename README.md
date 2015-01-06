@@ -27,7 +27,7 @@ Bind dones not support whildcard zones (it does support whild card A records...)
 This dns server can programmably serve entire whildcard zones.
 It can server out DNS records to CNAMES automaticly making S3 usage easy by using existing installs at in your whois records (Domain reg)
 
-What the public S3DNS-US-EAST-1-(1-6).DIGIHAVEN.COM DNS does
+What the public S3DNS-US-EAST-1-*.DIGIHAVEN.COM DNS does
 =============
 
 Forward example.com to www.example.com (save $10/month/ec2.micro?) for people who can't use root cname (godaddy DNS, BIND, etc....)
