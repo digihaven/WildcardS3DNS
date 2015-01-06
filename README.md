@@ -46,13 +46,38 @@ DNS whildecard records to S3 (save $0.50/zone/month/amazon)
 What the free/public testing DNS does
 =============
 
+Hosts any records (Such as A, MX, AAAA, TEXT, etc...) that must be in the root of the bucket (dns.record).
+
+dns.record example:
+```````````````
+$TTL 3D
+@       IN      SOA     #DNS	admin.example.com. (
+                        199609206       ; serial, todays date + todays serial #
+                        8H              ; refresh, seconds
+                        2H              ; retry, seconds
+                        4W              ; expire, seconds
+                        1D )            ; minimum, seconds
+
+@	A		127.0.0.1 ; 	will override the www forwarder
+www	CNAME		127.0.0.1 ; 	will override the www cname
+
+	IN	MX	1  	ASPMX.L.GOOGLE.COM.
+	IN	MX	5 	ALT1.ASPMX.L.GOOGLE.COM.
+	IN	MX	5	ALT2.ASPMX.L.GOOGLE.COM.
+	IN	MX	10	ASPMX2.GOOGLEMAIL.COM.
+	IN	MX	10	ASPMX3.GOOGLEMAIL.COM.
+	IN	MX	10	ASPMX4.GOOGLEMAIL.COM.
+	IN	MX	10	ASPMX5.GOOGLEMAIL.COM.
+```````````````
+
+
 Hosts HTTPS and certs located in your buckets (MUST BE DEST FOR DIGIHAVE USER READABLE AND NO PUBLIC!). DNS certs must be encrypted using RSA (2048-bit+) so only DIGIHAVEN can read it.
 
-Example:
+Example of (in root of bucket):
 ```````
 Key: ssl.key
 Cert: ssl.cert
-Bundel: ssl.ca (oplinal but suggested!)
+Bundel: ssl.ca (optional but suggested!)
 ```````
 
 The (planed) public testing key that must be used:
@@ -67,3 +92,5 @@ VWSSPpOvnhL73abABulsRuE5W5/Ubfe3ttijl6WUBNGLgTEBJL813mVzXKhD1PNN
 mQIDAQAB
 -----END PUBLIC KEY-----
 ```````
+
+There will be a program to encrypt and upload the certs to your bucket.
