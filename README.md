@@ -51,15 +51,15 @@ Hosts any records (Such as A, MX, AAAA, TEXT, etc...) that must be in the root o
 dns.record example:
 ```````````````
 $TTL 3D
-@       IN      SOA     #DNS	admin.example.com. (
+@       IN      SOA     #DNS#	admin.example.com. (
                         199609206       ; serial, todays date + todays serial #
                         8H              ; refresh, seconds
                         2H              ; retry, seconds
                         4W              ; expire, seconds
                         1D )            ; minimum, seconds
 
-@	A		127.0.0.1 ; 	will override the www forwarder
-www	CNAME		127.0.0.1 ; 	will override the www cname
+@	A		#HTTPS# ; 	will override the www forwarder and use the HTTPS bucket server
+www	CNAME		 diffrentbucket.example.com.s3-website-us-east-1.amazonaws.com ; 	will override the www cname
 
 	IN	MX	1  	ASPMX.L.GOOGLE.COM.
 	IN	MX	5 	ALT1.ASPMX.L.GOOGLE.COM.
@@ -69,7 +69,6 @@ www	CNAME		127.0.0.1 ; 	will override the www cname
 	IN	MX	10	ASPMX4.GOOGLEMAIL.COM.
 	IN	MX	10	ASPMX5.GOOGLEMAIL.COM.
 ```````````````
-
 
 Hosts HTTPS and certs located in your buckets (MUST BE DEST FOR DIGIHAVE USER READABLE AND NO PUBLIC!). DNS certs must be encrypted using RSA (2048-bit+) so only DIGIHAVEN can read it.
 
@@ -93,4 +92,5 @@ mQIDAQAB
 -----END PUBLIC KEY-----
 ```````
 
-There will be a program to encrypt and upload the certs to your bucket.
+Note: There will be a program to encrypt and upload the certs to your bucket.
+Note: THE TEST SERVER IS NOT >>YET<< PCI COMPLIANT!
