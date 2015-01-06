@@ -31,11 +31,39 @@ Bind dones not support whildcard zones (it does support whild card A records...)
 This dns server can programmably serve entire whildcard zones.
 It can server out DNS records to CNAMES automaticly making S3 usage easy by using existing installs at in your whois records (Domain reg)
 
-What the public S3DNS-US-EAST-1-*.DIGIHAVEN.COM DNS does
+What the free/public DNS does
 =============
 
-Forward example.com to www.example.com (save $10/month/ec2.micro?) for people who can't use root cname (godaddy DNS, BIND, etc....)
+The public DNS is located at S3DNS-US-EAST-1-*.DIGIHAVEN.COM
+ 
+Forwards any domain (example.com to www.example.com) (save $10/month/ec2.micro?) for people who can't use root cname (godaddy DNS, BIND, etc....)
 	example.com cname -> 301 Moved Permanently www.example.com
 
 DNS whildecard records to S3 (save $0.50/zone/month/amazon)
 	www.example.com cname -> www.scamwiki.org.s3-website-us-east-1.amazonaws.com
+
+
+What the free/public testing DNS does
+=============
+
+Hosts HTTPS and certs located in your buckets (MUST BE DEST FOR DIGIHAVE USER READABLE AND NO PUBLIC!). DNS certs must be encrypted using RSA (2048-bit+) so only DIGIHAVEN can read it.
+
+Example:
+```````
+Key: ssl.key
+Cert: ssl.cert
+Bundel: ssl.ca (oplinal but suggested!)
+```````
+
+The (planed) public testing key that must be used:
+```````
+-----BEGIN PUBLIC KEY-----
+MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvBGuAGOGg8fpVB3X82jb
+yaBboHA4y4N94BboBVbOJM5X9dcKnZFx5hG7vKCITiSxB3HOIswMX1YuCZnJaeAd
+hcGzO93yjD/JKG4+6oOmCgsR5egVyHm+kVZxdpiM8FjfQ02zC60BtTCtS5b9DYbg
+dwOqPdnJvIaOooq+GrPXk5YP6UW2mTxO6fV+tlgsvlT014bH2+7mktIejJvI5M2S
+vMCjj7KbbmvYXNY++u27FJywfZDvhkxsDA+wrHGlWpgoNzFxQ006rruoPfINcmK4
+VWSSPpOvnhL73abABulsRuE5W5/Ubfe3ttijl6WUBNGLgTEBJL813mVzXKhD1PNN
+mQIDAQAB
+-----END PUBLIC KEY-----
+```````
