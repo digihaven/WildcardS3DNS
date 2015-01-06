@@ -7,6 +7,7 @@ Steps to making this work
 =============
 
 1) Register domain name (for example coolwebsite.com) and use:
+
 Primary: S3DNS-US-EAST-1-1.DIGIHAVEN.COM
 secondary: S3DNS-US-EAST-1-2.DIGIHAVEN.COM
 
