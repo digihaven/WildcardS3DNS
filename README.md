@@ -30,8 +30,8 @@ It can server out DNS records to CNAMES automaticly making S3 usage easy by usin
 What the public S3DNS-US-EAST-1-(1-6).DIGIHAVEN.COM DNS does
 =============
 
-Forward example.com to www.example.com ($10/month/ec2.micro?) for people who can't use root cname (godaddy DNS, BIND, etc....)
+Forward example.com to www.example.com (save $10/month/ec2.micro?) for people who can't use root cname (godaddy DNS, BIND, etc....)
 	example.com cname -> 301 Moved Permanently www.example.com
 
-DNS whildecard records to S3 ($0.50/zone/month/amazon)
+DNS whildecard records to S3 (save $0.50/zone/month/amazon)
 	www.example.com cname -> www.scamwiki.org.s3-website-us-east-1.amazonaws.com
