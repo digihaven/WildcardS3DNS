@@ -7,17 +7,20 @@ Steps to making this work
 =============
 
 1) Register domain name (for example coolwebsite.com) and use:
-
-Primary: S3DNS-US-EAST-1-1.DIGIHAVEN.COM
-secondary: S3DNS-US-EAST-1-2.DIGIHAVEN.COM
+```````
+S3DNS-US-EAST-1-1.DIGIHAVEN.COM 
+S3DNS-US-EAST-1-2.DIGIHAVEN.COM
+````````
 
 Extra server:
+````````
 S3DNS-US-EAST-1-3.DIGIHAVEN.COM
 S3DNS-US-EAST-1-4.DIGIHAVEN.COM
 S3DNS-US-EAST-1-5.DIGIHAVEN.COM
 S3DNS-US-EAST-1-6.DIGIHAVEN.COM
+````````
 
-2) create bucket www.coolwebsite.com
+2) Create bucket www.coolwebsite.com
 
 Thats all! No more complicated DNS settings needed!
 
