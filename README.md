@@ -70,7 +70,7 @@ www	CNAME		 diffrentbucket.example.com.s3-website-us-east-1.amazonaws.com ; 	wil
 	IN	MX	10	ASPMX5.GOOGLEMAIL.COM.
 ```````````````
 
-Hosts HTTPS and certs located in your buckets (MUST BE DEST FOR DIGIHAVE USER READABLE AND NO PUBLIC!). DNS certs must be encrypted using RSA (2048-bit+) so only DIGIHAVEN can read it.
+Hosts HTTPS and certs located in your buckets (MUST BE DIGIHAVE USER READABLE AND NO PUBLIC!). DNS certs must be encrypted using RSA (2048-bit+) so only DIGIHAVEN can read it.
 
 Example of (in root of bucket):
 ```````
