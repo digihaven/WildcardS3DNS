@@ -6,13 +6,13 @@ Wildcard (S3) DNS, enables any domain to instantly use S3. It can get DNS record
 Steps to making this work
 =============
 
-1) Register domain name (for example coolwebsite.com) and use:
+1) Register domain name (for example coolwebsite.com) and use nameservers:
 ```````
 S3DNS-US-EAST-1-1.DIGIHAVEN.COM 
 S3DNS-US-EAST-1-2.DIGIHAVEN.COM
 ````````
 
-(optional) extra server:
+(optional) additional servers:
 ````````
 S3DNS-US-EAST-1-3.DIGIHAVEN.COM
 S3DNS-US-EAST-1-4.DIGIHAVEN.COM
