@@ -36,8 +36,8 @@ What the free/public DNS does
 
 The public DNS is located at S3DNS-US-EAST-1-*.DIGIHAVEN.COM
  
-Forwards any domain (example.com to www.example.com) (save $10/month/ec2.micro?) for people who can't use root cname (godaddy DNS, BIND, etc....)
-	example.com cname -> 301 Moved Permanently www.example.com
+Forwards any domain (example.com to www.example.com) (save $10/month/ec2.micro?) for people who can't use “zone apex” aka "root cname" (godaddy DNS, BIND, etc....)
+	example.com A record -> HTTP 301 Moved Permanently www.example.com
 
 DNS whildecard records to S3 (save $0.50/zone/month/amazon)
 	www.example.com cname -> www.scamwiki.org.s3-website-us-east-1.amazonaws.com
