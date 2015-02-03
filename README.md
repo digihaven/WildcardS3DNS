@@ -40,7 +40,7 @@ Forwards any domain (example.com to www.example.com) (save $10/month/ec2.micro?)
 	example.com A record -> HTTP 301 Moved Permanently www.example.com
 
 DNS whildecard records to S3 (save $0.50/zone/month/amazon)
-	www.example.com cname -> www.scamwiki.org.s3-website-us-east-1.amazonaws.com
+	www.example.com cname -> www.example.com.s3-website-us-east-1.amazonaws.com
 
 
 What the free/public testing DNS does
